@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="challan_report_inherit" inherit_id="Rental.report_rental_order_document">
+        <xpath expr="//div[@class='mt16']" position="replace"></xpath>
+    </template>
+</odoo>
