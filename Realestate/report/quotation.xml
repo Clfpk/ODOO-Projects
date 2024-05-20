@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="report_property">
+        <t t-foreach="docs" t-as="property">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="pt-5"></div>
+                    <div class="page">
+                        <h2 style="
+                            border: 1px;
+                            text-align: center;
+                            border-bottom: 1px;">
+                        <span>Property Offer</span>
+                        </h2>
+                        <h2>
+                            <span style="padding-top: 5px;">
+                                <span t-field="property.name"/>
+                            </span>
+                        </h2>
+                        <strong>Expected Price:</strong>
+                        <span t-field="property.expected_price"/>
+                    </div>
+                    <div>
+                        <strong>State:</strong>
+                        <span t-field="property.state"/>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Price</th>
+                                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Offers</th>
+                                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="property.offers_ids" t-as="offer">
+                                 <td>
+                                    <span t-field="offer.offer_amount">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span t-field="offer.offer_name">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span t-field="offer.state"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_real_estate_property" model="ir.actions.report">
+            <field name="name">Quotation</field>
+            <field name="model">real.estate.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">Realestate.report_property</field>
+            <field name="report_file">Realestate.report_property</field>
+            <field name="print_report_name">'Property Offers'</field>
+            <field name="binding_model_id" ref="model_real_estate_property"/>
+        </record>
+    </data>
+
+</odoo>
